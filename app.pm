@@ -17,4 +17,6 @@ get '/hw'=> sub {
 };
 
 
-app->start;
+my $port = 3000;
+
+app->start('daemon', '-l', "http://*:$port");
